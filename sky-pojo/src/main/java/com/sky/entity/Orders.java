@@ -35,6 +35,13 @@ public class Orders implements Serializable {
     public static final Integer PAID = 1;
     public static final Integer REFUND = 2;
 
+    /**
+     * 支付方式 0：平台账户 1 支付宝 2 微信
+     */
+    public static final Integer Platform = 0;
+    public static final Integer AiliPay = 1;
+    public static final Integer WeiXinPay = 2;
+
     private static final long serialVersionUID = 1L;
 
     private Long id;
@@ -57,7 +64,7 @@ public class Orders implements Serializable {
     //结账时间
     private LocalDateTime checkoutTime;
 
-    //支付方式 1微信，2支付宝
+    //支付方式 0平台账户，1微信，2支付宝
     private Integer payMethod;
 
     //支付状态 0未支付 1已支付 2退款
